@@ -1,4 +1,4 @@
-import {combineCancel} from '../components/loaders'
+import {combineCancel, timeout} from '../components/loaders'
 
 describe('Testing combineCancel', () => {
   test('combineCancel should return a promise', () => {
@@ -27,7 +27,7 @@ describe('Testing combineCancel', () => {
 
     const result = combineCancel(p1, new Promise(() => {}))
 
-    result.then(data => {
+    return result.then(data => {
       expect(data).toBe(resolveValue)
     })
   })
@@ -42,7 +42,7 @@ describe('Testing combineCancel', () => {
 
     const result = combineCancel(p1, new Promise(() => {}))
 
-    result.then(data => {
+    return result.then(data => {
       expect(data).toBe(rejectValue)
     })
   })
@@ -62,5 +62,72 @@ describe('Testing combineCancel', () => {
 
     expect(p1Cancel).toHaveBeenCalledTimes(1)
     expect(p2Cancel).toHaveBeenCalledTimes(1)
+  })
+})
+
+describe('Testing timeout', () => {
+  beforeEach(() => {
+    jest.useFakeTimers()
+  })
+
+  test('timeout should return a promise', () => {
+    expect(timeout(0) instanceof Promise).toBeTruthy()
+  })
+
+  test('timeout should return a promise that should resolve after the given timeout', () => {
+    const dummyFn = jest.fn()
+    const result = timeout(100)
+
+    expect.assertions(2)
+
+    result.then(() => {
+      dummyFn()
+    })
+
+    expect(dummyFn).not.toBeCalled()
+
+    jest.runAllTimers()
+
+    return result.then(() => {
+      expect(dummyFn).toHaveBeenCalledTimes(1)
+    })
+  })
+
+  test('timeout should return a promise that should resolve without any arguments', () => {
+    const dummyFn = jest.fn()
+    const result = timeout(100)
+
+    result.then((...args) => {
+      dummyFn(...args)
+    })
+
+    jest.runAllTimers()
+
+    expect.assertions(1)
+
+    return result.then(() => {
+      expect(dummyFn).toHaveBeenCalledWith(undefined)
+    })
+  })
+
+  test('timeout should return a promise that has cancel function', () => {
+    expect(timeout(100).cancel instanceof Function).toBeTruthy()
+  })
+
+  test('if cancel is called before timeout period, timeout should not be called', () => {
+    const dummyFn = jest.fn()
+    const result = timeout(1000)
+
+    result.then(() => {
+      dummyFn()
+    })
+
+    jest.advanceTimersByTime(100)
+
+    result.cancel()
+
+    jest.runAllTimers()
+
+    expect(dummyFn).not.toBeCalled()
   })
 })
