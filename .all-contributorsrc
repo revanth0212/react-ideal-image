@@ -81,7 +81,20 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "revanth0212",
+      "name": "Revanth Kumar Annavarapu",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/35203638?v=4",
+      "profile": "https://github.com/revanth0212",
+      "contributions": [
+        "code",
+        "test",
+        "doc",
+        "maintenance"
+      ]
     }
   ],
-  "repoType": "github"
+  "repoType": "github",
+  "commitConvention": "none"
 }

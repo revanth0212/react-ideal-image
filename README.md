@@ -12,7 +12,7 @@
 [![downloads][downloads-badge]][npmtrends]
 [![MIT License][license-badge]][license]
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
 [![PRs Welcome][prs-badge]][prs]
 [![Code of Conduct][coc-badge]][coc]
 
@@ -238,11 +238,26 @@ Width of the image in px.
 Thanks goes to these people ([emoji key][emojis]):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore -->
-| [<img src="https://avatars3.githubusercontent.com/u/179534?s=460&v=4" width="100px;"/><br /><sub><b>stereobooster</b></sub>](https://github.com/stereobooster)<br />[💻](https://github.com/stereobooster/react-ideal-image/commits?author=stereobooster "Code") [📖](https://github.com/stereobooster/react-ideal-image/commits?author=stereobooster "Documentation") [🚇](#infra-stereobooster "Infrastructure (Hosting, Build-Tools, etc)") [⚠️](https://github.com/stereobooster/react-ideal-image/commits?author=stereobooster "Tests") | [<img src="https://avatars1.githubusercontent.com/u/498274?s=460&v=4" width="100px;"/><br /><sub><b>Ivan Babak</b></sub>](https://github.com/sompylasar)<br />[📖](https://github.com/stereobooster/react-ideal-image/commits?author=sompylasar "Documentation") | [<img src="https://avatars1.githubusercontent.com/u/4299398?s=460&v=4" width="100px;"/><br /><sub><b>Arun Kumar</b></sub>](https://github.com/palerdot)<br />[📖](https://github.com/stereobooster/react-ideal-image/commits?author=palerdot "Documentation") | [<img src="https://avatars3.githubusercontent.com/u/1192452?v=4" width="100px;"/><br /><sub><b>Andrew Lisowski</b></sub>](http://hipstersmoothie.com)<br />[💻](https://github.com/stereobooster/react-ideal-image/commits?author=hipstersmoothie "Code") | [<img src="https://avatars1.githubusercontent.com/u/3386714?v=4" width="100px;"/><br /><sub><b>Timothy Vernon</b></sub>](https://github.com/tvthatsme)<br />[⚠️](https://github.com/stereobooster/react-ideal-image/commits?author=tvthatsme "Tests") | [<img src="https://avatars0.githubusercontent.com/u/5151881?v=4" width="100px;"/><br /><sub><b>vishalShinde</b></sub>](http://vs1682.github.io)<br />[📖](https://github.com/stereobooster/react-ideal-image/commits?author=vs1682 "Documentation") | [<img src="https://avatars3.githubusercontent.com/u/5207796?v=4" width="100px;"/><br /><sub><b>Evgeniy Kumachev</b></sub>](https://github.com/EvgeniyKumachev)<br />[📖](https://github.com/stereobooster/react-ideal-image/commits?author=EvgeniyKumachev "Documentation") |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| [<img src="https://avatars0.githubusercontent.com/u/2087056?v=4" width="100px;"/><br /><sub><b>John Munn</b></sub>](https://github.com/Tawe)<br />[💻](https://github.com/stereobooster/react-ideal-image/commits?author=Tawe "Code") |
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/stereobooster"><img src="https://avatars3.githubusercontent.com/u/179534?s=460&v=4" width="100px;" alt="stereobooster"/><br /><sub><b>stereobooster</b></sub></a><br /><a href="https://github.com/stereobooster/react-ideal-image/commits?author=stereobooster" title="Code">💻</a> <a href="https://github.com/stereobooster/react-ideal-image/commits?author=stereobooster" title="Documentation">📖</a> <a href="#infra-stereobooster" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/stereobooster/react-ideal-image/commits?author=stereobooster" title="Tests">⚠️</a></td>
+    <td align="center"><a href="https://github.com/sompylasar"><img src="https://avatars1.githubusercontent.com/u/498274?s=460&v=4" width="100px;" alt="Ivan Babak"/><br /><sub><b>Ivan Babak</b></sub></a><br /><a href="https://github.com/stereobooster/react-ideal-image/commits?author=sompylasar" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/palerdot"><img src="https://avatars1.githubusercontent.com/u/4299398?s=460&v=4" width="100px;" alt="Arun Kumar"/><br /><sub><b>Arun Kumar</b></sub></a><br /><a href="https://github.com/stereobooster/react-ideal-image/commits?author=palerdot" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://hipstersmoothie.com"><img src="https://avatars3.githubusercontent.com/u/1192452?v=4" width="100px;" alt="Andrew Lisowski"/><br /><sub><b>Andrew Lisowski</b></sub></a><br /><a href="https://github.com/stereobooster/react-ideal-image/commits?author=hipstersmoothie" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/tvthatsme"><img src="https://avatars1.githubusercontent.com/u/3386714?v=4" width="100px;" alt="Timothy Vernon"/><br /><sub><b>Timothy Vernon</b></sub></a><br /><a href="https://github.com/stereobooster/react-ideal-image/commits?author=tvthatsme" title="Tests">⚠️</a></td>
+    <td align="center"><a href="http://vs1682.github.io"><img src="https://avatars0.githubusercontent.com/u/5151881?v=4" width="100px;" alt="vishalShinde"/><br /><sub><b>vishalShinde</b></sub></a><br /><a href="https://github.com/stereobooster/react-ideal-image/commits?author=vs1682" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/EvgeniyKumachev"><img src="https://avatars3.githubusercontent.com/u/5207796?v=4" width="100px;" alt="Evgeniy Kumachev"/><br /><sub><b>Evgeniy Kumachev</b></sub></a><br /><a href="https://github.com/stereobooster/react-ideal-image/commits?author=EvgeniyKumachev" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/Tawe"><img src="https://avatars0.githubusercontent.com/u/2087056?v=4" width="100px;" alt="John Munn"/><br /><sub><b>John Munn</b></sub></a><br /><a href="https://github.com/stereobooster/react-ideal-image/commits?author=Tawe" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/revanth0212"><img src="https://avatars1.githubusercontent.com/u/35203638?v=4" width="100px;" alt="Revanth Kumar Annavarapu"/><br /><sub><b>Revanth Kumar Annavarapu</b></sub></a><br /><a href="https://github.com/stereobooster/react-ideal-image/commits?author=revanth0212" title="Code">💻</a> <a href="https://github.com/stereobooster/react-ideal-image/commits?author=revanth0212" title="Tests">⚠️</a> <a href="https://github.com/stereobooster/react-ideal-image/commits?author=revanth0212" title="Documentation">📖</a> <a href="#maintenance-revanth0212" title="Maintenance">🚧</a></td>
+  </tr>
+</table>
 
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors][all-contributors] specification.

@@ -34,8 +34,10 @@ To add yourself to the table of contributors on the `README.md`, please use the
 automated script as part of your PR:
 
 ```console
-npm run add-contributor
+npm run add-contributor <USERNAME> <COMMA-SEPARATED-CONTRIBUTIONS>
 ```
+
+You can get the list of contributions from [here][emoji-keys].
 
 Follow the prompt and commit `.all-contributorsrc` and `README.md` in the PR.
 If you've already added yourself to the list and are making
@@ -68,5 +70,6 @@ Also, please watch the repo and respond to questions/bug reports/feature
 requests! Thanks!
 
 [egghead]: https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github
-[all-contributors]: https://github.com/stereobooster/all-contributors
+[all-contributors]: https://allcontributors.org/docs/en/overview
 [issues]: https://github.com/stereobooster/react-ideal-image/issues
+[emoji-keys]: https://allcontributors.org/docs/en/emoji-key
