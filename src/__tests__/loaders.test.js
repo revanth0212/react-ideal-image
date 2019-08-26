@@ -1,4 +1,4 @@
-import {combineCancel, timeout} from '../components/loaders'
+import {combineCancel, timeout, imageLoader} from '../components/loaders'
 
 describe('Testing combineCancel', () => {
   test('combineCancel should return a promise', () => {
@@ -129,5 +129,73 @@ describe('Testing timeout', () => {
     jest.runAllTimers()
 
     expect(dummyFn).not.toBeCalled()
+  })
+})
+
+describe('Testing imageLoader', () => {
+  const FAILURE_SRC = ''
+  const SUCCESS_SRC = 'https://avatars1.githubusercontent.com/u/35203638?v=4'
+
+  beforeAll(() => {
+    // eslint-disable-next-line accessor-pairs
+    Object.defineProperty(global.Image.prototype, 'src', {
+      set(src) {
+        if (src === FAILURE_SRC) {
+          setTimeout(() => this.onerror(new Error('mocked error')), 1000)
+        } else if (src === SUCCESS_SRC) {
+          setTimeout(() => {
+            this.onload()
+          }, 1000)
+        }
+      },
+    })
+  })
+
+  beforeEach(() => {
+    jest.useFakeTimers()
+  })
+
+  test('imageLoader should return a promise', () => {
+    expect(imageLoader(FAILURE_SRC) instanceof Promise).toBeTruthy()
+  })
+
+  test('promise returned by imageLoader should have cancel function', () => {
+    expect(imageLoader(FAILURE_SRC).cancel instanceof Function).toBeTruthy()
+  })
+
+  test('imageLoader should not add any img nodes to the document', () => {
+    expect(document.getElementsByTagName('img')).toHaveLength(0)
+
+    imageLoader(SUCCESS_SRC)
+
+    expect(document.getElementsByTagName('img')).toHaveLength(0)
+  })
+
+  test.skip('if a valid source is given, the promise returned by imageLoader should resolve', () => {
+    let tempValue = 'original'
+
+    const result = imageLoader(SUCCESS_SRC)
+
+    result.then(() => {
+      tempValue = 'modified'
+    })
+
+    jest.runAllTimers()
+
+    return expect(tempValue).toBe('modified')
+  })
+
+  test('if cancel function is called on the returned promise, the promise should not be resolved', () => {
+    const result = imageLoader(SUCCESS_SRC)
+
+    let tempValue = 'original'
+
+    result.cancel()
+
+    result.then(() => {
+      tempValue = 'modified'
+    })
+
+    return expect(tempValue).toBe('original')
   })
 })
